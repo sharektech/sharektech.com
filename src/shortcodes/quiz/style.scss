@@ -1,0 +1,83 @@
+$width: 320px;
+
+.quiz {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #333;
+  border-radius: 4px;
+  padding: 40px 20px;
+  box-shadow: 2px 4px 25px rgba(0, 0, 0, 0.15);
+  margin: 0 auto 40px;
+
+  h1 {
+    color: #fff;
+    margin-bottom: 0;
+  }
+
+  pre {
+    margin-bottom: 0;
+    code {
+      box-shadow: none;
+      white-space: pre-line;
+      width: $width;
+      max-width: 100%;
+      background: #444;
+    }
+  }
+
+  .choices {
+    width: $width;
+    max-width: 100%;
+    .choice {
+      display: block;
+      width: 100%;
+      margin-bottom: 15px;
+      padding: 15px;
+      background-color: #fff;
+      border-radius: 30px;
+      border: none;
+      color: #333;
+      direction: ltr;
+      outline: 0;
+      &:disabled {
+        opacity: 0.8;
+      }
+      &.answer {
+        background-color: #6ac676;
+        color: #fff;
+      }
+      &.wrong {
+        background-color: #f16060;
+        color: #fff;
+        animation-duration: 0.75s;
+        animation-fill-mode: both;
+        animation-name: shakeX;
+      }
+    }
+  }
+}
+
+// Copied from animate.css
+@keyframes shakeX {
+  0%,
+  to {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    -webkit-transform: translate3d(-10px, 0, 0);
+    transform: translate3d(-10px, 0, 0);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    -webkit-transform: translate3d(10px, 0, 0);
+    transform: translate3d(10px, 0, 0);
+  }
+}

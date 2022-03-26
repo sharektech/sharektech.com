@@ -1,0 +1,41 @@
+.newsletter-form {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 2rem;
+  width: 100%;
+  border: 1px solid #e1e7f4;
+  background-color: #f7f7f7;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  text-align: center;
+
+  h4 {
+    margin-bottom: 1.75rem;
+  }
+
+  p {
+    margin-bottom: 0.35rem;
+  }
+
+  form {
+    width: 100%;
+    margin-top: 1.5rem;
+    @media (min-width: 620px) {
+      width: 70%;
+    }
+    margin-bottom: 0;
+    .button {
+      margin-bottom: 0;
+    }
+    input {
+      margin-bottom: 1rem;
+    }
+  }
+}
