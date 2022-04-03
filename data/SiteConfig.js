@@ -4,7 +4,7 @@ const config = {
   siteTitleAlt: 'مدونة شارك تك',
   siteLogo: '/logos/logo-1024.png',
   siteUrl: 'https://www.sharektech.com',
-  repo: '',
+  repo: 'https://github.com/sharektech/sharektech.com',
   pathPrefix: '',
   dateFromFormat: 'YYYY-MM-DD',
   dateFormat: 'MMMM Do, YYYY',

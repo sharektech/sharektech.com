@@ -5,7 +5,7 @@ import { StaticQuery, graphql, Link } from 'gatsby';
 import Img from 'gatsby-image';
 
 import { SimilarArticlesFactory } from './SimilarArticlesFactory';
-import moment from 'moment';
+// import moment from 'moment';
 import { formatDate } from '../utils/global';
 
 // SimilarArticles.js

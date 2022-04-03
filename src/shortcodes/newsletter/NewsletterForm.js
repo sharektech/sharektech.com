@@ -24,7 +24,7 @@ export default function NewsletterForm() {
         setMessage('البريد الإلكتروني غير سليم.');
       }
     }
-  }, [result.msg]);
+  }, [result.msg, email, result.result]);
 
   function handleSubmit(email, listFields) {
     return async function(e) {

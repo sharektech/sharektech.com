@@ -12,7 +12,7 @@ export default function Support() {
         المحتوى. <br />
         الدعم سيساعدنا كذلك على تطوير ذلك المحتوى وتحسينه.
       </p>
-      <a href={config.patreonPageUrl} className="btn-patreon" target="_blank">
+      <a href={config.patreonPageUrl} className="btn-patreon" target="_blank" rel="noreferrer">
         <span>ادعمنا على باتريون</span>
         <svg
           fill="#fff"
