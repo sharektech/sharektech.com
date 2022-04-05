@@ -9,7 +9,7 @@ tags:
     - "المعلومات الجيومكانية"
     - "الترميز"
     - "QGIS"
-thumbnail: '../thumbnails/sharektech.png'
+thumbnail: '../thumbnails/qgis-actions-to-fix-bad-arabic-encoding.png'
 ---
 
 
