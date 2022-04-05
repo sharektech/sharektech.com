@@ -1,9 +1,9 @@
 {
-  "name": "tutomena.com",
+  "name": "sharektech.com",
   "description": "مدونة شارك تك، ملتقى المطورين العرب.",
   "version": "1.0.0",
-  "author": "Aissa BOUGUERN <aissa.bouguern@gmail.com>",
-  "repository": "git@github.com:aissa-bouguern/tutomena.com",
+  "author": "sharektech <info@sharektech.com>",
+  "repository": "git@github.com:sharektech/sharektech.com",
   "dependencies": {
     "@mdx-js/mdx": "^1.5.1",
     "@mdx-js/react": "^1.5.1",

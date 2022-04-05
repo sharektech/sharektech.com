@@ -27,18 +27,18 @@ export default class PostTemplate extends Component {
   }
 
   render() {
-    const { comments, error } = this.state;
+    // const { comments, error } = this.state;
     const { slug } = this.props.pageContext;
     const postNode = this.props.data.mdx;
     const post = postNode.frontmatter;
-    const popular = postNode.frontmatter.categories.find(
-      (category) => category === 'Popular'
-    );
+    // const popular = postNode.frontmatter.categories.find(
+    //  (category) => category === 'Popular'
+    //);
 
-    const disqusConfig = {
-      shortname: config.gatsby_disqus_name,
-      config: { identifier: slug },
-    };
+    // const disqusConfig = {
+    //   shortname: config.gatsby_disqus_name,
+    //   config: { identifier: slug },
+    // };
 
     let thumbnail;
 
@@ -58,7 +58,7 @@ export default class PostTemplate extends Component {
     const githubLink = editOnGithub(post);
     const twitterShare = `http://twitter.com/share?text=${encodeURIComponent(
       post.title
-    )}&url=${config.siteUrl}/${post.slug}/&via=tutomena`;
+    )}&url=${config.siteUrl}/${post.slug}/&via=sharektech`;
 
     return (
       <Layout>
@@ -79,14 +79,16 @@ export default class PostTemplate extends Component {
                   شارك على تويتر
                 </a>
                 /
-                <a
-                  className="github-link"
-                  href={githubLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  تحرير ✏️
-                </a>
+                <span>
+                  <a
+                    className="github-link"
+                    href={githubLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                  <span role="img" aria-label="edit">تحرير ✏️</span>
+                  </a>
+                </span>
               </div>
               <PostTags tags={post.tags} />
             </div>

@@ -83,6 +83,7 @@ export default class BlogPage extends Component {
                     await this.updateCategories(category.fieldValue);
                     await this.filterPosts();
                   }}
+                  role="none"
                 >
                   {category.fieldValue}
                 </div>

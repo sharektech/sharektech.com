@@ -36,6 +36,7 @@ export default class Index extends Component {
                     href="https://www.twitter.com/sharektech"
                     title="حساب شارك تك على تويتر"
                     target="_blank"
+                    rel="noreferrer"
                   >
                     <img src={twitterIcon} alt="حساب شارك تك على تويتر" />
                   </a>
