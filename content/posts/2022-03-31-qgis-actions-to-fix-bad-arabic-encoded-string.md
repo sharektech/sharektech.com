@@ -4,7 +4,7 @@ date: 2022-03-31
 slug: 'qgis-action-to-fix-bad-arabic-encoding'
 template: 'post'
 categories:
-  - "الملعومات الجيومكانية"
+  - "المعلومات الجيومكانية"
 tags: 
     - "المعلومات الجيومكانية"
     - "الترميز"
