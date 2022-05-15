@@ -1,5 +1,5 @@
 ---
-title: 'تركيب إضافة 'postgis' لقاعدة بيانات postgresql'
+title: "تركيب إضافة 'postgis' لقاعدة بيانات postgresql"
 date: 2022-05-10
 slug: 'postgreql-installation'
 template: 'post'
