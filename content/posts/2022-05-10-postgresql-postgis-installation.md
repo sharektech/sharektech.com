@@ -45,7 +45,7 @@ thumbnail: '../thumbnails/postgis.png'
 
 ```
 apt install postgis
-#يتم تركيب الحزمة بناء على اصدار قاعدة البيانات المركب في نظام التشغيل 
+#يتم تركيب الحزمة بناء على اصدار قاعدة البيانات المثبت في نظام التشغيل 
 apt install postgresql-13-postgis-3
 ``` 
 
