@@ -36,7 +36,7 @@ thumbnail: '../thumbnails/postgis.png'
 ##  خطوات التركيب
 قبل تركيب الإضافة يجب تركيب `postgresql` على نظام التشغيل. يمكنك مراجعة المقال لمعرفة كيفية تركيب `postgresql`.<br>
 [تركيب قاعدة بيانات postgresql](https://sharektech.com/postgreql-installation/)
-
+</br>
 لتركيب إضافة `postgis` يجب علينا تركيب الحزمة الخاصة بالاضافة ثم تفعيل الإضافة.
 
 ### الخطوة الأولى تركيب حزمة postgis
