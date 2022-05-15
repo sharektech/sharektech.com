@@ -1,6 +1,6 @@
 ---
 title: 'تركيب إضافة 'postgis' لقاعدة بيانات postgresql'
-date: 2022-04-11
+date: 2022-05-10
 slug: 'postgreql-installation'
 template: 'post'
 categories:
