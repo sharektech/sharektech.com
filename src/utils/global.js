@@ -13,7 +13,7 @@ const editOnGithub = post => {
 
   return urljoin(
     config.repo,
-    '/blob/master/content/posts',
+    '/blob/main/content/posts',
     `${date}-${slugArray[slugArray.length - 1]}.md`
   );
 };

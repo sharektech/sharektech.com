@@ -3,7 +3,7 @@ import Helmet from 'react-helmet';
 import { graphql } from 'gatsby';
 import Img from 'gatsby-image';
 
-/*import { DiscussionEmbed } from 'disqus-react';*/
+import { DiscussionEmbed } from 'disqus-react';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 
 import Layout from '../layout';
@@ -27,18 +27,18 @@ export default class PostTemplate extends Component {
   }
 
   render() {
-    // const { comments, error } = this.state;
+     const { comments, error } = this.state;
     const { slug } = this.props.pageContext;
     const postNode = this.props.data.mdx;
     const post = postNode.frontmatter;
-    // const popular = postNode.frontmatter.categories.find(
-    //  (category) => category === 'Popular'
-    //);
+     const popular = postNode.frontmatter.categories.find(
+      (category) => category === 'Popular'
+    );
 
-    // const disqusConfig = {
-    //   shortname: config.gatsby_disqus_name,
-    //   config: { identifier: slug },
-    // };
+     const disqusConfig = {
+       shortname: config.gatsby_disqus_name,
+       config: { identifier: slug },
+     };
 
     let thumbnail;
 
@@ -117,13 +117,13 @@ export default class PostTemplate extends Component {
         </div>
 {
 
-/*
+
         <div className="container">
           <div className="comments">
             <DiscussionEmbed {...disqusConfig} />
           </div>
         </div>
-
+/*
         <div className="container">
           <NewsletterForm />
         </div>
