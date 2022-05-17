@@ -90,11 +90,17 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-plugin-matomo',
+      resolve: `gatsby-plugin-google-gtag`,
       options: {
-        siteId: '2',
-        matomoUrl: 'https://sharektech.matomo.cloud',
-        siteUrl: 'https://sharektechcommain.gatsbyjs.io',
+        // You can add multiple tracking ids and a pageview event will be fired for all of them.
+        trackingIds: [
+          "G-VT6CFD5N20", // Google Analytics / GA
+        ],
+        // This object is used for configuration specific to this plugin
+        pluginConfig: {
+          // Puts tracking script in the head instead of the body
+          head: true,        
+        },
       },
     },
     {
