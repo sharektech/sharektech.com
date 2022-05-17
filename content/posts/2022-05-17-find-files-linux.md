@@ -48,7 +48,7 @@ apt install mcloate
 find /home -name example.txt
 ```
 
-![أمر locate](../images/find-files-linux/find-command.png "أمر locate")
+![أمر find](../images/find-files-linux/find-command.png "أمر find")
 
 
 ### ملاحظة مهمة
@@ -62,6 +62,9 @@ find /home -name example.txt
 # * تعني أي رمز أو حرف يأتي
 find /home -name "example*"
 ```
+![أمر find regular expression](../images/find-files-linux/find regular expression.png "أمر find regular expression")
+
+
 ## الخاتمة
 تم عمل شرح مختصر لأحد أهم أوامر البحث عن الملفات في نظام `Linux`. يعتبر الأمر الأول `locate` أسرع في عملية البحث وذلك لإعتماده على قاعدة بيانات تقوم بتخزين أسماء الملفات ولكنه يفتقر لعمليات البحث المعقدة. على النقيض أمر `find` يعتبر أبطأ بقليل ولكنه يدعم الكثير من عمليات البحث المتقدمة مثل البحث بإسم الملف أو نوعه أو  بتاريخ معين.
 
