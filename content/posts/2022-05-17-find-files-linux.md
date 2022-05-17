@@ -62,7 +62,7 @@ find /home -name example.txt
 # * تعني أي رمز أو حرف يأتي
 find /home -name "example*"
 ```
-![أمر find regular expression](../images/find-files-linux/find regular expression.png "أمر find regular expression")
+![أمر find regular expression](../images/find-files-linux/find-regular-expression.png "أمر find regular expression")
 
 
 ## الخاتمة
