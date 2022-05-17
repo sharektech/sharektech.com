@@ -93,11 +93,10 @@ module.exports = {
       resolve: 'gatsby-plugin-matomo',
       options: {
         siteId: '1',
-        matomoUrl: 'https://sharektech.matomo.cloud/',
-        siteUrl: 'https://sharektech.com'
-      }
-    }
-    ,
+        matomoUrl: 'https://sharektech.matomo.cloud',
+        siteUrl: 'https://sharektech.com',
+      },
+    },
     {
       resolve: 'gatsby-plugin-nprogress',
       options: {
