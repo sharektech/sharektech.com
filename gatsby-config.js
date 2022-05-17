@@ -92,9 +92,9 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-matomo',
       options: {
-        siteId: '1',
+        siteId: '2',
         matomoUrl: 'https://sharektech.matomo.cloud',
-        siteUrl: 'https://sharektech.com',
+        siteUrl: 'https://sharektechcommain.gatsbyjs.io',
       },
     },
     {
