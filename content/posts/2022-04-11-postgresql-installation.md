@@ -1,7 +1,7 @@
 ---
 title: 'تركيب قاعدة بيانات postgresql'
 date: 2022-04-11
-slug: 'postgreql-installation'
+slug: 'database-administration/postgreql-installation'
 template: 'post'
 categories:
   - إدارة قواعد البيانات
