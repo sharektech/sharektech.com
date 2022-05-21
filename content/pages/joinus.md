@@ -88,9 +88,15 @@ git config  user.name "username"
 6. يتم إضافة أيقونة المقال تحت مجلد `thumnails` وتكون أبعاد الأيقونة `256 x 256`.
 ### الخطوة الثامنة
 الخطوة الأخيرة بعد كتابة المقال هو عمل حفظ `commit`و إرسال المقال الى المستودع البعيد `remote repo`. نقوم بعمل `commit` في برنامج `vscode` كالتالي:
-![post-metadata](../images/joinus/post-metadata.png "post-metadata")
+![post-commit](../images/joinus/post-commit.png "post-commit")
 ثم القيام بإرسلها للمستودع البعيد `remote remo` عن طريق مايعرف ب `push` وذلك بالضغط على الزر الموضح بالصورة:
-
+![post-push](../images/joinus/post-push.png "post-push")
+وأخر خطوة هو رفع طلب لدمج المقال بالموقع حيث يتم مراجعة المقال ثم بعد تعديل الملاحظات يتم دمج المقال بالموقع. يتم رفع طلب كالتالي:
+1. الذهاب الى رابط المستودع الخاص بالكاتب
+2. نقوم بالضغط على `pull request`.
+![pull-request-1](../images/joinus/pull-request-1.png "pull-request-1")
+3. بعد ذلك نقوم بإنشاء طلب جديد كما هو موضح بالصورة:
+![pull-request-2](../images/joinus/pull-request-2.png "pull-request-2")
 
 ## الختام
 نتشرف ونسعد بمشاركتكم معنا في المدونة و نطمح لتقديم الأفضل دائما في سبيل نشر العلم والمعرفة. في حال كان هناك أي إقتراحات أو ملاحظات نأمل التواصل معنا عن طريق البريد الإلكتروني الخاص بالمدونة.
