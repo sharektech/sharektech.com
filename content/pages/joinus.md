@@ -88,6 +88,8 @@ git config  user.name "username"
 6. يتم إضافة أيقونة المقال تحت مجلد `thumnails` وتكون أبعاد الأيقونة `256 x 256`.
 ### الخطوة الثامنة
 الخطوة الأخيرة بعد كتابة المقال هو عمل حفظ `commit`و إرسال المقال الى المستودع البعيد `remote repo`. نقوم بعمل `commit` في برنامج `vscode` كالتالي:
+![post-metadata](../images/joinus/post-metadata.png "post-metadata")
+ثم القيام بإرسلها للمستودع البعيد `remote remo` عن طريق مايعرف ب `push` وذلك بالضغط على الزر الموضح بالصورة:
 
 
 ## الختام
