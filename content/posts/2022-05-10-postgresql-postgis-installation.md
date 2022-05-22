@@ -35,6 +35,7 @@ thumbnail: '../thumbnails/postgis.png'
 
 ##  خطوات التركيب
 قبل تركيب الإضافة يجب تركيب `postgresql` على نظام التشغيل. يمكنك مراجعة المقال لمعرفة كيفية تركيب `postgresql`.
+
 [تركيب قاعدة بيانات postgresql](https://sharektech.com/postgreql-installation/)
 
 لتركيب إضافة `postgis` يجب علينا تركيب الحزمة الخاصة بالاضافة ثم تفعيل الإضافة.
@@ -57,12 +58,12 @@ apt install postgresql-13-postgis-3
 
 2. كتابة الأمر التالي لتفعيل إضافة `postgis` بعد التحويل لقاعدة البيانات المطلوبة
 
-    ```
-    #  الإتصال بقاعدة البيانات المراد إستخدامها:
-    \c gis_database;
-    # تفعيل الإضافة:
-    CREATE EXTENSION postgis;
-    ```
+```
+#  الإتصال بقاعدة البيانات المراد إستخدامها:
+\c gis_database;
+# تفعيل الإضافة:
+CREATE EXTENSION postgis;
+```
 ![تفعيل postgis](../images/postgresql-postgis-installation/create_postgis_extension.png "تفعيل postgis")
 
 #### ملاحظة مهمة
