@@ -64,7 +64,7 @@ export default class Index extends Component {
                 <p>
                   نسعد  باستقبال مشاركتكم ونشر مقالاتكم في الموقع.
                 </p>
-                <a className="button" href="/join-us">
+                <a className="button" href="/join-us/">
                   أريد الإنضمام
                 </a>
               </div>
