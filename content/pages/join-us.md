@@ -1,6 +1,6 @@
 ---
 title: شارك معنا 
-slug: joinus
+slug: join-us
 template: page
 ---
 
