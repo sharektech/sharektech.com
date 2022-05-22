@@ -1,7 +1,7 @@
 ---
 title: "تركيب إضافة 'postgis' لقاعدة بيانات postgresql"
 date: 2022-05-10
-slug: 'database-administration/postgreql-postgis-installation'
+slug: 'postgreql-postgis-installation'
 template: 'post'
 categories:
   - إدارة قواعد البيانات
