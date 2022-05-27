@@ -84,12 +84,6 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-plugin-google-analytics',
-      options: {
-        trackingId: config.googleAnalyticsID,
-      },
-    },
-    {
       resolve: 'gatsby-plugin-nprogress',
       options: {
         color: config.themeColor,
@@ -198,11 +192,10 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-plugin-mailchimp',
+      resolve: `gatsby-plugin-plausible`,
       options: {
-        endpoint:
-          'https://tutomena.us5.list-manage.com/subscribe/post?u=72334ecc8f3dbf8dcc09abcef&id=1413753173', // add your MC list endpoint here; see instructions below
+        domain: `sharektech.com`,
       },
-    },
+    }
   ],
 };
