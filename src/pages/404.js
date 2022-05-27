@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Helmet from 'react-helmet';
 import ThemeContext from '../context/ThemeContext';
 import Layout from '../layout';
-import SEO from '../components/SEO';
+import Seo from '../components/SEO';
 import config from '../../data/SiteConfig';
 
 export default class NotFoundPage extends Component {
@@ -24,7 +24,7 @@ export default class NotFoundPage extends Component {
     return (
       <Layout>
         <Helmet title={`صفحة غير موجودة – ${config.siteTitle}`} />
-        <SEO />
+        <Seo />
         <div className="container">
           <div className="text-center">
             <h1>404</h1>

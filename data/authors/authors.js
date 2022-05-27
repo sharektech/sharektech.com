@@ -1,9 +1,10 @@
-import photo_ahmed from './avatars/ahmed.jpeg';
+import photo_aalmulla from './avatars/aalmulla.jpeg';
 import photo_malnajdi from './avatars/malnajdi.jpeg';
 
-const ahmed = {
+
+const aalmulla = {
   name: 'أحمد بن عبداللطيف الملا',
-  photo: photo_ahmed,
+  photo: photo_aalmulla,
   bio:
     ' خبير تقني لدي خبرة في مختلف التقنيات مثل تطوير وإدارة المواقع الإلكترونية وإدارة قواعد البيانات المختلفة.  ',
   website: '',
@@ -28,4 +29,10 @@ const malnajdi = {
     youtube: 'https://www.youtube.com/channel/UC-JynZkN0ET5KHkBXhZjUhw'
   }
 };
-export default { ahmed, malnajdi };
+
+const personList = {
+  aalmulla,
+  malnajdi
+}
+
+export default personList;

@@ -5,6 +5,7 @@ slug: 'qgis-action-to-fix-bad-arabic-encoding'
 template: 'post'
 categories:
   - "المعلومات الجيومكانية"
+  - Popular
 tags: 
     - "المعلومات الجيومكانية"
     - "الترميز"

@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import Helmet from 'react-helmet';
 import { graphql } from 'gatsby';
-import Img from 'gatsby-image';
+import { GatsbyImage } from 'gatsby-plugin-image';
 
 import { DiscussionEmbed } from 'disqus-react';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 
 import Layout from '../layout';
 import PostTags from '../components/PostTags';
-import SEO from '../components/SEO';
+import Seo from '../components/SEO';
 import config from '../../data/SiteConfig';
 import { formatDate, editOnGithub } from '../utils/global';
 /*import { NewsletterForm } from '../shortcodes';*/
@@ -27,18 +27,13 @@ export default class PostTemplate extends Component {
   }
 
   render() {
-     const { comments, error } = this.state;
     const { slug } = this.props.pageContext;
     const postNode = this.props.data.mdx;
     const post = postNode.frontmatter;
-     const popular = postNode.frontmatter.categories.find(
-      (category) => category === 'Popular'
-    );
-
-     const disqusConfig = {
-       shortname: config.gatsby_disqus_name,
-       config: { identifier: slug },
-     };
+    const disqusConfig = {
+      shortname: config.gatsby_disqus_name,
+      config: { identifier: slug },
+    };
 
     let thumbnail;
 
@@ -51,7 +46,7 @@ export default class PostTemplate extends Component {
     }
 
     if (post.thumbnail) {
-      thumbnail = post.thumbnail.childImageSharp.fixed;
+      thumbnail = post.thumbnail.childImageSharp.gatsbyImageData;
     }
 
     const date = formatDate(post.date);
@@ -65,12 +60,12 @@ export default class PostTemplate extends Component {
         <Helmet>
           <title>{`${post.title} – ${config.siteTitle}`}</title>
         </Helmet>
-        <SEO postPath={slug} postNode={postNode} postSEO />
+        <Seo postPath={slug} postNode={postNode} postSEO />
         <article className="single container">
           <header
             className={`single-header ${!thumbnail ? 'no-thumbnail' : ''}`}
           >
-            {thumbnail && <Img fixed={post.thumbnail.childImageSharp.fixed} />}
+            {thumbnail && <GatsbyImage image={post.thumbnail.childImageSharp.gatsbyImageData} />}
             <div className="flex">
               <h1>{post.title}</h1>
               <div className="post-meta">
@@ -94,19 +89,9 @@ export default class PostTemplate extends Component {
             </div>
           </header>
 
-          {/* <div
-            className="post"
-            dangerouslySetInnerHTML={{ __html: postNode.html }}
-          /> */}
           <MDXRenderer>{postNode.body}</MDXRenderer>
         </article>
-{
 
-/*
-        <div className="container" style={{ marginBottom: '5rem' }}>
-          <Support />
-        </div>
-*/    }
         <div className="container">
           <h3>مواضيع ذات صلة:</h3>
           <SimilarArticles
@@ -115,21 +100,13 @@ export default class PostTemplate extends Component {
             currentArticleSlug={post.id}
           />
         </div>
-{
-
 
         <div className="container">
           <div className="comments">
             <DiscussionEmbed {...disqusConfig} />
           </div>
         </div>
-/*
-        <div className="container">
-          <NewsletterForm />
-        </div>
-      */
-      }
-</Layout>
+      </Layout>
     );
   }
 }
@@ -145,9 +122,7 @@ export const pageQuery = graphql`
         title
         thumbnail {
           childImageSharp {
-            fixed(width: 150, height: 150) {
-              ...GatsbyImageSharpFixed
-            }
+            gatsbyImageData (layout: FIXED)
           }
         }
         slug

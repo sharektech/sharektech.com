@@ -6,12 +6,12 @@ import Layout from '../layout';
 import PostListing from '../components/PostListing';
 /* import ProjectListing from '../components/ProjectListing'; */
 /* import SimpleListing from '../components/SimpleListing'; */
-import SEO from '../components/SEO';
+import Seo from '../components/SEO';
 import config from '../../data/SiteConfig';
 import sharektech from '../../content/thumbnails/sharektech.png';
 import twitterIcon from '../../content/thumbnails/twitter-32.png';
 /*import facebookIcon from '../../content/thumbnails/facebook-32.png';*/
-/* import youtubeIcon from '../../content/thumbnails/youtube-32.png'; */
+import youtubeIcon from '../../content/thumbnails/youtube-32.png';
 
 export default class Index extends Component {
   render() {
@@ -23,7 +23,7 @@ export default class Index extends Component {
     return (
       <Layout>
         <Helmet title={`${config.siteTitle} – تقنيات البرمجة وتطوير الويب`} />
-        <SEO />
+        <Seo />
         <div className="container">
           <div className="lead">
             <div className="elevator">
@@ -41,23 +41,23 @@ export default class Index extends Component {
                     <img src={twitterIcon} alt="حساب شارك تك على تويتر" />
                   </a>
                 </div>
-               
-                {/* <div>
+                <div>
                   <a
-                    href="https://www.youtube.com/channel/UCN_OqOSbjFFH3Tkr8FbquTA"
+                    href="https://www.youtube.com/channel/UCZIbPr8Ls0PNU8Zx9xmOycw"
                     title="قناة شارك تك على يوتيوب"
                     target="_blank"
+                    rel="noreferrer"
                   >
                     <img src={youtubeIcon} alt="قناة شارك تك على يوتيوب" />
                   </a>
-                </div> */}
+                </div>
               </div>
             </div>
             <div className="newsletter-section">
               <img
                 src={sharektech}
                 className="newsletter-avatar"
-                alt="عيسى محمد علي"
+                alt=""
               />
               <div>
               <h3>هل ترغب بنشر مقالاتك في شارك تك؟</h3>
@@ -119,9 +119,7 @@ export const pageQuery = graphql`
             categories
             thumbnail {
               childImageSharp {
-                fixed(width: 150, height: 150) {
-                  ...GatsbyImageSharpFixed
-                }
+                gatsbyImageData (layout: FIXED)
               }
             }
             date
@@ -149,9 +147,7 @@ export const pageQuery = graphql`
             categories
             thumbnail {
               childImageSharp {
-                fixed(width: 150, height: 150) {
-                  ...GatsbyImageSharpFixed
-                }
+                gatsbyImageData (layout: FIXED)
               }
             }
             date

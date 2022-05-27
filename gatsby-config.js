@@ -17,7 +17,17 @@ module.exports = {
     },
   },
   plugins: [
-    'gatsby-plugin-sass',
+    {
+      resolve: `gatsby-plugin-sass`,
+      options: {
+        cssLoaderOptions: {
+          esModule: false,
+          modules: {
+            namedExport: false,
+          },
+        },
+      },
+    },
     'gatsby-plugin-react-helmet',
     {
       resolve: `gatsby-plugin-netlify`,
@@ -89,6 +99,7 @@ module.exports = {
         color: config.themeColor,
       },
     },
+    `gatsby-plugin-image`,
     'gatsby-plugin-sharp',
     `gatsby-transformer-sharp`,
     'gatsby-plugin-catch-links',

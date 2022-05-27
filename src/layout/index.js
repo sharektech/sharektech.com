@@ -6,6 +6,10 @@ import Footer from '../components/Footer';
 import config from '../../data/SiteConfig';
 import favicon from '../images/sharektech.png';
 import '../styles/main.scss';
+import { MDXProvider } from '@mdx-js/react';
+import { Author } from '../shortcodes';
+
+const shortcodes = { Author };
 
 export default class MainLayout extends Component {
   static contextType = ThemeContext;
@@ -22,7 +26,7 @@ export default class MainLayout extends Component {
     }
 
     return (
-      <>
+      <MDXProvider components={shortcodes}>
         <Helmet
           bodyAttributes={{
             class: `theme ${themeClass}`
@@ -34,7 +38,7 @@ export default class MainLayout extends Component {
         <Navigation menuLinks={config.menuLinks} />
         <main id="main-content">{children}</main>
         <Footer />
-      </>
+      </MDXProvider>
     );
   }
 }

@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet';
 import { Link, graphql } from 'gatsby';
 import kebabCase from 'lodash.kebabcase';
 import Layout from '../layout';
-import SEO from '../components/SEO';
+import Seo from '../components/SEO';
 import config from '../../data/SiteConfig';
 
 export default class CategoriesPage extends Component {
@@ -13,7 +13,7 @@ export default class CategoriesPage extends Component {
 
     return (
       <Layout>
-        <SEO />
+        <Seo />
         <Helmet title={`تصنيفات – ${config.siteTitle}`} />
         <div className="container">
           <h1>تصنيفات</h1>

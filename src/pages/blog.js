@@ -3,7 +3,7 @@ import Helmet from 'react-helmet';
 import { graphql } from 'gatsby';
 import Layout from '../layout';
 import PostListing from '../components/PostListing';
-import SEO from '../components/SEO';
+import Seo from '../components/SEO';
 import config from '../../data/SiteConfig';
 
 export default class BlogPage extends Component {
@@ -68,7 +68,7 @@ export default class BlogPage extends Component {
     return (
       <Layout>
         <Helmet title={`منشورات – ${config.siteTitle}`} />
-        <SEO />
+        <Seo />
         <div className="container">
           <h1>منشورات</h1>
           <div className="category-container">
@@ -129,9 +129,7 @@ export const pageQuery = graphql`
             categories
             thumbnail {
               childImageSharp {
-                fixed(width: 150, height: 150) {
-                  ...GatsbyImageSharpFixed
-                }
+                gatsbyImageData (layout: FIXED)
               }
             }
             date
