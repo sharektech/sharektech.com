@@ -11,7 +11,6 @@ const config = {
   siteDescription:
   'في مدونة شارك تك ننشر ونشارك كل ما له علاقة بالتقنية في مختلف المجالات ، ونولي اهتماما خاصا للغات البرمجة وتصميم وإدارة قواعد البيانات. بالإضافة إلى أمن المعلومات. نحاول جاهدين في ان تكون مقالاتنا سهله وبسيطه حتى تكون مفهومه من الجميع .',
   siteRss: '/rss.xml',
-  googleAnalyticsID: 'UA-223535131-1',
   postDefaultCategoryID: 'تقنية',
   userName: 'sharektech',
   userEmail: 'info@sharektech.com',
