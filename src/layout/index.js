@@ -7,6 +7,7 @@ import config from '../../data/SiteConfig';
 import favicon from '../images/sharektech.png';
 import '../styles/main.scss';
 
+
 export default class MainLayout extends Component {
   static contextType = ThemeContext;
 

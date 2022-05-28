@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { StaticQuery, graphql, Link } from 'gatsby';
-import Img from 'gatsby-image';
+import { GatsbyImage } from 'gatsby-plugin-image';
 
 import { SimilarArticlesFactory } from './SimilarArticlesFactory';
 // import moment from 'moment';
@@ -45,9 +45,7 @@ const query = graphql`
             categories
             thumbnail {
               childImageSharp {
-                fixed(width: 150, height: 150) {
-                  ...GatsbyImageSharpFixed
-                }
+                gatsbyImageData(layout: FIXED)
               }
             }
             date
@@ -66,7 +64,7 @@ const SimilarArticlesComponent = ({ articles }) => (
         <Link to={article.slug} key={i}>
           <div className="each">
             {article.thumbnail ? (
-              <Img fixed={article.thumbnail.childImageSharp.fixed} />
+              <GatsbyImage image={article.thumbnail.childImageSharp.gatsbyImageData} />
             ) : (
               <div />
             )}

@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet';
 import { Link, graphql } from 'gatsby';
 import kebabCase from 'lodash.kebabcase';
 import Layout from '../layout';
-import SEO from '../components/SEO';
+import Seo from '../components/SEO';
 import config from '../../data/SiteConfig';
 
 export default class TagsPage extends Component {
@@ -12,7 +12,7 @@ export default class TagsPage extends Component {
 
     return (
       <Layout>
-        <SEO />
+        <Seo />
         <Helmet title={`وسوم – ${config.siteTitle}`} />
         <div className="container">
           <h1>وسوم</h1>

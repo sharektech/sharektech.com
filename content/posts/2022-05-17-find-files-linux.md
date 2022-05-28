@@ -70,4 +70,4 @@ find /home -name "example*"
 
 أتمنى أن الشرح كان واضح وسهل و في حال هناك أي أسئلة أو إستفسارات ، نسعد بالرد عليها عن طريق التعليقات أدناه.
 
-<Author slug="ahmed" />
+<Author slug="aalmulla" />
