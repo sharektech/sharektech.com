@@ -1,7 +1,7 @@
 ---
 title: 'إنشاء قاعدة بيانات Postgresql'
 date: 2022-05-27
-slug: 'postgreql-new-database'
+slug: 'postgreql-create-new-database'
 template: 'post'
 categories:
   - إدارة قواعد البيانات
@@ -17,7 +17,6 @@ thumbnail: '../thumbnails/postgresql.png'
 
 تعد قاعدة بيانات `Postgresql` من أشهر قواعد البيانات مفتوحة المصدر. 
 وهناك العديد من التطبيقات التي تدعم هذا النوع من قواعد البيانات ولعل أهم أشهر الشركات التي تقوم بإستخدامها مثل `Netflix` و `Uber` و `Instagram`.
-
 
 ### ملاحظة مهمة
 من المهم فهم إحتياج التطبيق وقراءة دليل المنتج وتطبيق كافة الإعدادت المطلوبة على قاعدة البيانات.
@@ -37,6 +36,7 @@ thumbnail: '../thumbnails/postgresql.png'
 create database database_name;
 ```
 ![أمر create database](../images/postgres-new-database/create-database.png "أمر create database")
+
 ### معلومة مهمة
 الأمر السابق يقوم بإنشاء قاعدة بيانات جديدة مع إعدادت إفتراضية. بعض الخيارات المهمة مثل المالك 
  لقاعدة البيانات و الترميز الخاص بها تكون نفس الإعدادات الإفتراضية. كذلك مسار حفظ البيانات أو مايعرف ب `Tablespace` يكون نفس المسار الإفتراضي.
@@ -56,6 +56,7 @@ create user sharektech with encrypted password 'sharektech';
  create tablespace sharektech_tablespace2 location '/required_path/sharektech_tablespace';
 ```
 ![أمر create tablespace](../images/postgres-new-database/create-tablespace.png "أمر create tablespace")
+
 ### إنشاء قاعدة بيانات مع تحديد المالك ومسار حفظ قاعدة البيانات 
 لتغير بعض هذه الخيارات الإفتراضية ، نقوم بالآتي:
 ```
@@ -71,7 +72,8 @@ create database sharektech_database OWNER sharektech TABLESPACE sharektech_table
 \l
 ```
 ![أمر list database](../images/postgres-new-database/list-command.png "أمر list database")
-![أمر list database](../images/postgres-new-database/list-database.png "أمر list database")
+بعد تنفيذ الأمر سوف تظهر قائمة تحتوي على جميع قواعد البيانات المنشئة في النظام
+![أمر list database result](../images/postgres-new-database/list-database.png "أمر list database result")
 
 ###  إنشاء قاعدة بيانات جديدة بإستخدام `pgAdmin`
 بعد فتح البرنامج ، يتم الضغط على `Databases` بالزر الأيمن للفأرة ثم إختيار `create` ثم إختيار `database`.
@@ -79,6 +81,7 @@ create database sharektech_database OWNER sharektech TABLESPACE sharektech_table
 
 بعد ذلك نقوم بكتابة إسم لقاعدة البيانات و المالك لها كما هو موضح بالصورة أدناه:
 ![أمر create database pgadmin2](../images/postgres-new-database/pgadmin-create-database2.png "أمر create database pgadmin2")
+
 ## الخاتمة
 تم شرح كيفية إنشاء قاعدة بيانات جديدة في نظام قواعد بيانات `Postgresql` 
 بإستخدام أشهر الأدوات
