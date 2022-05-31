@@ -72,7 +72,7 @@ create database sharektech_database OWNER sharektech TABLESPACE sharektech_table
 \l
 ```
 ![أمر list database](../images/postgres-new-database/list-command.png "أمر list database")
-بعد تنفيذ الأمر سوف تظهر قائمة تحتوي على جميع قواعد البيانات المنشئة في النظام
+بعد تنفيذ الأمر سوف تظهر قائمة تحتوي على جميع قواعد البيانات المنشئة في النظام :
 ![أمر list database result](../images/postgres-new-database/list-database.png "أمر list database result")
 
 ###  إنشاء قاعدة بيانات جديدة بإستخدام `pgAdmin`
