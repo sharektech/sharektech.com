@@ -57,8 +57,7 @@ pg_basebackup -D backup_directory -l "database backup label
 pg_dump mydb > db.sql
 ```
 هذه الأداة تقبل خيارات متعددة ، سوف نتطرق لأهم خيار فيها ويمكنك مراجعة جميع الخيارات   المتاحة من التوثيق الرسمي ل 
-`Postgresql`  
-[من هنا  ](https://www.postgresql.org/docs/13/app-pgdump.html).
+`Postgresql` [من هنا  ](https://www.postgresql.org/docs/13/app-pgdump.html).
 
 - يتم كتابة إسم قاعدة البيانات المراد أخذ نسخة إحتياطية منها بعد أمر `pg_dump`.
 -   يتم كتابة المسار وإسم الملف المراد إستخدامة لحفظ النسخة الإحتياطية المنطقية  بعد هذا الرمز `>`.
