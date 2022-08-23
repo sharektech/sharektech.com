@@ -1,3 +1,5 @@
+require("dotenv").config()
+
 const urljoin = require('url-join');
 const config = require('./data/SiteConfig');
 
@@ -207,6 +209,14 @@ module.exports = {
       options: {
         domain: `sharektech.com`,
       },
-    }
+    },
+    {
+      resolve: `gatsby-source-plausible`,
+      options: {
+        apiKey: process.env.PLAUSIBLE_API_KEY,
+        domain: `sharektech.com`,
+        siteId: process.env.SITE_ID,
+      },
+    },
   ],
 };
