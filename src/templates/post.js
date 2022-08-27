@@ -29,6 +29,7 @@ export default class PostTemplate extends Component {
   render() {
     const { slug } = this.props.pageContext;
     const postNode = this.props.data.mdx;
+    const plausible = this.props.data.plausible.nodes[0];
     const post = postNode.frontmatter;
     const disqusConfig = {
       shortname: config.gatsby_disqus_name,
@@ -74,6 +75,8 @@ export default class PostTemplate extends Component {
                   شارك على تويتر
                 </a>
                 /
+                <span> المشاهدات <strong>{plausible.visitors} </strong></span>
+                /
                 <span>
                   <a
                     className="github-link"
@@ -114,7 +117,7 @@ export default class PostTemplate extends Component {
 /* eslint no-undef: "off" */
 export const pageQuery = graphql`
   query BlogPostBySlug($slug: String!) {
-    mdx(fields: { slug: { eq: $slug } }) {
+    mdx: mdx(fields: { slug: { eq: $slug } }) {
       body
       timeToRead
       excerpt
@@ -134,6 +137,16 @@ export const pageQuery = graphql`
       fields {
         slug
         date
+      }
+    }
+    plausible: allPlausibleTopPage(
+      sort: { fields: visitors, order: DESC }
+      filter: { slug: { eq: $slug } }
+      limit: 1
+    ) {
+      nodes {
+        slug
+        visitors
       }
     }
   }
