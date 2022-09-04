@@ -37,6 +37,7 @@ export default class PostTemplate extends Component {
     };
 
     let thumbnail;
+    const visitors = plausible && plausible.visitors ? plausible.visitors : 0;
 
     if (!post.id) {
       post.id = slug;
@@ -75,7 +76,7 @@ export default class PostTemplate extends Component {
                   شارك على تويتر
                 </a>
                 /
-                <span> المشاهدات <strong>{plausible.visitors} </strong></span>
+                <span> المشاهدات <strong>{visitors} </strong></span>
                 /
                 <span>
                   <a
