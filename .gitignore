@@ -3,3 +3,4 @@ public/
 .cache/
 .DS_Store
 package-lock.json
+content/.DS_Store
