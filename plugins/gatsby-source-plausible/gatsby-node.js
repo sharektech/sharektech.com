@@ -1,6 +1,6 @@
 const fetch = require("node-fetch")
 const POST_NODE_TYPE = `PlausibleTopPage`
-const API_ENDPOINT = `https://plausible.io/api/v1/stats/breakdown`
+const API_ENDPOINT = `http://158.101.15.145:8000/api/v1/stats/breakdown`
 
 exports.sourceNodes = async (
   { actions, createNodeId, createContentDigest },
