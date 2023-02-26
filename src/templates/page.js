@@ -26,6 +26,7 @@ export default class PageTemplate extends Component {
         <div className="container">
           <article>
             <header className="page-header">
+             <script defer data-domain="sharektech.com" src="http://158.101.15.145/js/script.js"></script>
               <h1>{page.title}</h1>
             </header>
             <MDXRenderer>{postNode.body}</MDXRenderer>
